@@ -1,0 +1,25 @@
+syntax = "proto3";
+package proto;
+
+option java_multiple_files = true;
+option java_package = "stubs";
+
+service client {
+  rpc registerOrder(Order) returns (APIResponse);
+  rpc cancelOrder(OrderID) returns (APIResponse);
+}
+
+message Order{
+  string name = 1;
+  int64 customerTable = 2;
+  string observations = 3;
+}
+
+message OrderID {
+  int32 orderNumber = 1;
+}
+
+message APIResponse{
+  string responseMessage = 1;
+  int32 messageCode = 2;
+}
