@@ -9,7 +9,7 @@ import stubs.clientGrpc;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ClientServices extends clientGrpc.clientImplBase {
+public class Services extends clientGrpc.clientImplBase {
 
     private Queue<Order> pedidos = new LinkedList<>();
 
