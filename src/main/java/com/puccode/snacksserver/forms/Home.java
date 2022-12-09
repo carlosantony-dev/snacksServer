@@ -84,6 +84,7 @@ public class Home extends javax.swing.JFrame {
                 new Home().setVisible(true);
             }
         });
+
     }
     
     public void refreshOrders(Queue<Order> orders) {
@@ -95,6 +96,7 @@ public class Home extends javax.swing.JFrame {
             newJpanel.setBackground(Color.cyan);
             newJpanel.add(new JLabel("Posição: " + priority + " Pedido: " + ord.getName()));
             newJpanel.add(new JLabel("Mesa: " + ord.getCustomerTable()));
+            newJpanel.add(new JLabel("Qtd: " + ord.getQuantidade()));
             newJpanel.add(new JLabel("Obs: " + ord.getObservations()));
             main_window.add(newJpanel);
             priority++;
@@ -102,6 +104,7 @@ public class Home extends javax.swing.JFrame {
         main_window.revalidate();
         main_window.repaint();
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel main_window;

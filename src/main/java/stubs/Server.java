@@ -38,14 +38,15 @@ public final class Server {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014server.proto\022\005proto\"B\n\005Order\022\014\n\004name\030\001" +
+      "\n\014server.proto\022\005proto\"V\n\005Order\022\014\n\004name\030\001" +
       " \001(\t\022\025\n\rcustomerTable\030\002 \001(\003\022\024\n\014observati" +
-      "ons\030\003 \001(\t\"\036\n\007OrderID\022\023\n\013orderNumber\030\001 \001(" +
-      "\005\";\n\013APIResponse\022\027\n\017responseMessage\030\001 \001(" +
-      "\t\022\023\n\013messageCode\030\002 \001(\0052n\n\006client\0221\n\rregi" +
-      "sterOrder\022\014.proto.Order\032\022.proto.APIRespo" +
-      "nse\0221\n\013cancelOrder\022\016.proto.OrderID\032\022.pro" +
-      "to.APIResponseB\t\n\005stubsP\001b\006proto3"
+      "ons\030\003 \001(\t\022\022\n\nquantidade\030\004 \001(\003\"\036\n\007OrderID" +
+      "\022\023\n\013orderNumber\030\001 \001(\005\";\n\013APIResponse\022\027\n\017" +
+      "responseMessage\030\001 \001(\t\022\023\n\013messageCode\030\002 \001" +
+      "(\0052n\n\006client\0221\n\rregisterOrder\022\014.proto.Or" +
+      "der\032\022.proto.APIResponse\0221\n\013cancelOrder\022\016" +
+      ".proto.OrderID\032\022.proto.APIResponseB\t\n\005st" +
+      "ubsP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56,7 +57,7 @@ public final class Server {
     internal_static_proto_Order_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Order_descriptor,
-        new java.lang.String[] { "Name", "CustomerTable", "Observations", });
+        new java.lang.String[] { "Name", "CustomerTable", "Observations", "Quantidade", });
     internal_static_proto_OrderID_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_proto_OrderID_fieldAccessorTable = new

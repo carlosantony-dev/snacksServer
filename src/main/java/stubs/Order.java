@@ -67,6 +67,11 @@ private static final long serialVersionUID = 0L;
             observations_ = s;
             break;
           }
+          case 32: {
+
+            quantidade_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -181,6 +186,16 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int QUANTIDADE_FIELD_NUMBER = 4;
+  private long quantidade_;
+  /**
+   * <code>int64 quantidade = 4;</code>
+   * @return The quantidade.
+   */
+  public long getQuantidade() {
+    return quantidade_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -204,6 +219,9 @@ private static final long serialVersionUID = 0L;
     if (!getObservationsBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, observations_);
     }
+    if (quantidade_ != 0L) {
+      output.writeInt64(4, quantidade_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -222,6 +240,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getObservationsBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, observations_);
+    }
+    if (quantidade_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, quantidade_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -244,6 +266,8 @@ private static final long serialVersionUID = 0L;
         != other.getCustomerTable()) return false;
     if (!getObservations()
         .equals(other.getObservations())) return false;
+    if (getQuantidade()
+        != other.getQuantidade()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -262,6 +286,9 @@ private static final long serialVersionUID = 0L;
         getCustomerTable());
     hash = (37 * hash) + OBSERVATIONS_FIELD_NUMBER;
     hash = (53 * hash) + getObservations().hashCode();
+    hash = (37 * hash) + QUANTIDADE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getQuantidade());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -401,6 +428,8 @@ private static final long serialVersionUID = 0L;
 
       observations_ = "";
 
+      quantidade_ = 0L;
+
       return this;
     }
 
@@ -430,6 +459,7 @@ private static final long serialVersionUID = 0L;
       result.name_ = name_;
       result.customerTable_ = customerTable_;
       result.observations_ = observations_;
+      result.quantidade_ = quantidade_;
       onBuilt();
       return result;
     }
@@ -488,6 +518,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getObservations().isEmpty()) {
         observations_ = other.observations_;
         onChanged();
+      }
+      if (other.getQuantidade() != 0L) {
+        setQuantidade(other.getQuantidade());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -696,6 +729,36 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       observations_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long quantidade_ ;
+    /**
+     * <code>int64 quantidade = 4;</code>
+     * @return The quantidade.
+     */
+    public long getQuantidade() {
+      return quantidade_;
+    }
+    /**
+     * <code>int64 quantidade = 4;</code>
+     * @param value The quantidade to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuantidade(long value) {
+      
+      quantidade_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 quantidade = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuantidade() {
+      
+      quantidade_ = 0L;
       onChanged();
       return this;
     }

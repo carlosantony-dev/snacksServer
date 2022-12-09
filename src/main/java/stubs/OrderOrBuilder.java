@@ -36,4 +36,10 @@ public interface OrderOrBuilder extends
    */
   com.google.protobuf.ByteString
       getObservationsBytes();
+
+  /**
+   * <code>int64 quantidade = 4;</code>
+   * @return The quantidade.
+   */
+  long getQuantidade();
 }

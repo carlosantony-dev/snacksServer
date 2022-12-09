@@ -13,6 +13,7 @@ message Order{
   string name = 1;
   int64 customerTable = 2;
   string observations = 3;
+  int64 quantidade = 4;
 }
 
 message OrderID {
